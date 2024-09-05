@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
- 
+use App\Http\Controllers\SimpleController;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -18,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/post', [PostController::class, 'index']);
+
+Route::resource('simple', SimpleController::class);
