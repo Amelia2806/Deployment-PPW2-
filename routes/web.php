@@ -69,3 +69,7 @@ Route::resource('gallery', GalleryController::class);
 //pertemuan 12
 Route::get('/send-mail', [SendEmailController::class, 'index'])->name('kirim-email');
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
+
+// routes/api.php
+
+Route::get('/galleries', [GalleryController::class, 'index']);
